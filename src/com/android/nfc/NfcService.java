@@ -2576,17 +2576,17 @@ public class NfcService implements DeviceHostListener {
         }
 
         void observe() {
-            resolver.registerContentObserver(Settings.AOKP
-                    .getUriFor(Settings.AOKP.NFC_POLLING_MODE),
+            resolver.registerContentObserver(Settings.REVOLT
+                    .getUriFor(Settings.REVOLT.NFC_POLLING_MODE),
                     false, this);
-            POLLING_MODE = Settings.AOKP.getInt(resolver,
-                    Settings.AOKP.NFC_POLLING_MODE, SCREEN_STATE_ON_UNLOCKED);
+            POLLING_MODE = Settings.REVOLT.getInt(resolver,
+                    Settings.REVOLT.NFC_POLLING_MODE, SCREEN_STATE_ON_UNLOCKED);
         }
 
         @Override
         public void onChange(boolean selfChange) {
-            POLLING_MODE = Settings.AOKP.getInt(resolver,
-                    Settings.AOKP.NFC_POLLING_MODE, SCREEN_STATE_ON_UNLOCKED);
+            POLLING_MODE = Settings.REVOLT.getInt(resolver,
+                    Settings.REVOLT.NFC_POLLING_MODE, SCREEN_STATE_ON_UNLOCKED);
         }
     }
 }
